@@ -18,10 +18,12 @@ export const store = new Vuex.Store({
     },
     mutations: {
         increment: state => {
-            return state.counter++;
+            state.counter++;
+            state.clicks++;
         },
         decrement: state => {
-            return state.counter--;
+            state.counter--;
+            state.clicks++;
         }
     }
 });

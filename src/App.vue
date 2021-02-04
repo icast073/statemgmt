@@ -29,6 +29,7 @@
       <Result  />
       <AnotherResult />
       <Counter />
+      <AnotherCounter />
     </v-main>
   </v-app>
 </template>
@@ -37,14 +38,15 @@
 import Result from "./components/Result";
 import Counter from "./components/Counter";
 import AnotherResult from "./components/AnotherResult";
-
+import AnotherCounter from "./components/AnotherCounter";
 
 export default {
   name: "App",
   components: {
     Result,
     Counter,
-    AnotherResult
+    AnotherResult,
+    AnotherCounter
   }
 };
 </script>
