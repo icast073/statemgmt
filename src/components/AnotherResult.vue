@@ -1,6 +1,6 @@
 <template>
  <v-container>
-  <p>Counter is: {{ counter }}</p>
+  <p>Another Counter is: {{ counter }}</p>
  </v-container>
 </template>
 

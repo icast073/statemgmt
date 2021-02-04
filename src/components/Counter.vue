@@ -1,19 +1,20 @@
 <template>
-    <div>
-        <button class="btn btn-primary" @click="increment">Increment</button>
-        <button class="btn btn-primary" @click="decrement">Decrement</button>
-    </div>
+  <v-container>
+    <v-btn block color="primary" @click="increment">Increment</v-btn>
+    <hr />
+    <v-btn block color="error" @click="decrement">Decrement</v-btn>
+  </v-container>
 </template>
 
 <script>
-    export default {
-        methods: {
-            increment() {
-                this.$emit('updated', 1);
-            },
-            decrement() {
-                this.$emit('updated', -1);
-            }
-        }
-    }
+export default {
+  methods: {
+    increment() {
+      this.$store.state.counter++;
+    },
+    decrement() {
+      this.$store.state.counter--;
+    },
+  },
+};
 </script>
