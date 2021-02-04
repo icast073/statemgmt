@@ -1,15 +1,17 @@
 <template>
- <v-container>
-  <p>Another Counter is: {{ counter }}</p>
- </v-container>
+  <v-container>
+    <p>Another Counter is: {{ doubleCounter }}</p>
+    <p>Number of Clicks: {{ stringCounter }}</p>
+  </v-container>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   computed: {
-      counter() {
-          return this.$store.getters.doubleCounter;
-      }
+    ...mapGetters([
+        "doubleCounter", 
+        "stringCounter"])
   },
 };
 </script>

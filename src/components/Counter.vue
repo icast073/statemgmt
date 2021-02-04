@@ -11,9 +11,11 @@ export default {
   methods: {
     increment() {
       this.$store.state.counter++;
+      this.$store.state.clicks++;
     },
     decrement() {
       this.$store.state.counter--;
+      this.$store.state.clicks++;
     },
   },
 };
