@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import Vuex from 'vuex';
 
 Vue.use(Vuex);
@@ -14,6 +14,14 @@ export const store = new Vuex.Store({
         },
         stringCounter: state => {
             return state.clicks + ' Clicks';
+        }
+    },
+    mutations: {
+        increment: state => {
+            return state.counter++;
+        },
+        decrement: state => {
+            return state.counter--;
         }
     }
 });
