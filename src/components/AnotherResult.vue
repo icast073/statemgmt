@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <p>Another Counter is: {{ doubleCounter }}</p>
+    <p class="text">Another Counter is: {{ doubleCounter }}</p>
     <p>Number of Clicks: {{ stringCounter }}</p>
   </v-container>
 </template>
@@ -15,3 +15,9 @@ export default {
   },
 };
 </script>
+<style>
+.text {
+  color:black;
+
+}
+</style>

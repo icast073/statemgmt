@@ -8,16 +8,16 @@
           contain
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
           transition="scale-transition"
-          width="40"
+          width="30"
         />
 
         <v-img
-          alt="Me Name"
+          alt="Irma"
           class="shrink mt-1 hidden-sm-and-down"
           contain
-          min-width="100"
+          min-width="1000"
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+          width="1000"
         />
       </div>
       <v-spacer></v-spacer>
@@ -26,10 +26,40 @@
     </v-app-bar>
 
     <v-main>
-      <Result  />
-      <AnotherResult />
-      <Counter />
-      <AnotherCounter />
+      <template>
+        <v-parallax height="800" dark src="./assets/log.jpg">
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <h1 class="display-1 font-weight-thin mb-2">
+                Learning to Vuetify
+              </h1>
+            </v-col>
+            <v-row align="center" justify="center">
+              <v-col align="center" justify="center" cols="9"></v-col>
+              <v-col align="center" justify="center" cols="3">
+                <h4 class="subheading text">
+                  <v-text-field
+                    label="Main input"
+                    type="text"
+                    v-model="value"
+                    hide-details="auto"
+                  >
+                  </v-text-field>
+                  <p>Here: {{ value }}</p> 
+                </h4>
+              </v-col>
+            </v-row>
+          </v-row>
+          <v-row>
+            <v-col align="center" justify="center" cols="12">
+              <Result />
+              <AnotherResult />
+              <Counter />
+              <AnotherCounter />
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </template>
     </v-main>
   </v-app>
 </template>
@@ -42,11 +72,33 @@ import AnotherCounter from "./components/AnotherCounter";
 
 export default {
   name: "App",
+  computed: {
+    value: {
+      get() {
+        return this.$store.getters.value;
+      },
+      set(value) {
+        this.$store.dispatch('updateValue', value);
+      }
+      
+    },
+  },
+  methods:{
+    updateValue(event) {
+      this.$store.dispatch('updateValue', event.target.value);
+    }
+  },
   components: {
     Result,
     Counter,
     AnotherResult,
-    AnotherCounter
-  }
+    AnotherCounter,
+  },
 };
 </script>
+
+<style scoped>
+.text {
+  color: black;
+}
+</style>

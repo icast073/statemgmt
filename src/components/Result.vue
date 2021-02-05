@@ -1,6 +1,6 @@
 <template>
  <v-container>
-  <p>Counter is: {{ counter }}</p>
+  <p class="text">Counter is: {{ counter }}</p>
  </v-container>
 </template>
 
@@ -13,3 +13,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.text {
+color:black;
+}
+</style>
