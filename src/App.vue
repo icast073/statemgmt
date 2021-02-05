@@ -10,15 +10,6 @@
           transition="scale-transition"
           width="30"
         />
-
-        <v-img
-          alt="Irma"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="1000"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="1000"
-        />
       </div>
       <v-spacer></v-spacer>
       <span class="mr-2">Irma Koelig</span>
@@ -27,27 +18,23 @@
 
     <v-main>
       <template>
-        <v-parallax height="800" dark src="./assets/log.jpg">
+        <v-parallax height="1200" dark src="./assets/log.jpg">
           <v-row align="center" justify="center">
-            <v-col class="text-center" cols="12">
-              <h1 class="display-1 font-weight-thin mb-2">
-                Learning to Vuetify
-              </h1>
-            </v-col>
             <v-row align="center" justify="center">
-              <v-col align="center" justify="center" cols="9"></v-col>
-              <v-col align="center" justify="center" cols="3">
+              <v-col align="center" justify="center" cols="4"></v-col>
+              <v-col align="center" justify="center" cols="6">
                 <h4 class="subheading text">
                   <v-text-field
-                    label="Main input"
+                    label="Some chars?"
                     type="text"
                     v-model="value"
                     hide-details="auto"
                   >
                   </v-text-field>
-                  <p>Here: {{ value }}</p> 
+                  <p>The chars: {{ value }}</p> 
                 </h4>
               </v-col>
+               <v-col align="center" justify="center" cols="2"></v-col>
             </v-row>
           </v-row>
           <v-row>
