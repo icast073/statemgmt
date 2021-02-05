@@ -1,16 +1,16 @@
 <template>
   <v-container>
-    <v-btn block color="primary" @click="increment">Increment</v-btn>
+    <v-btn block color="primary" @click="increment(100)">Increment</v-btn>
     <hr />
-    <v-btn block color="error" @click="decrement">Decrement</v-btn>
+    <v-btn block color="error" @click="decrement(200)">Decrement</v-btn>
   </v-container>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
   methods: {
-      ...mapMutations([
+      ...mapActions([
           'increment',
           'decrement'
       ])
